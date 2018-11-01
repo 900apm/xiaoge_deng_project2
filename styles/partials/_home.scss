@@ -1,0 +1,21 @@
+.first{
+  background: $orangeyYellow;
+
+  .wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1{
+    width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+    @include font($lora, $normal, 50px, $black);
+    }
+
+    figure{
+      width: 40%;
+    }
+  }
+}
