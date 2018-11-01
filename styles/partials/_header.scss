@@ -1,4 +1,4 @@
-header{
+.header{
   background: $orangeyYellow;
   color: $black;
   text-transform: uppercase;
@@ -6,22 +6,24 @@ header{
   display: flex;
   align-items: center;
 
-  ul{
+  &__ul{
     width: 40%;
     min-width: 500px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    li:nth-child(3){
-      padding: 0 20px;
-      @include font($lora, $normal, 30px, $black);
-    }
     
-    a:hover{
+    &__a{
       transition: all 0.2s;
-      color: white;
+      &:hover{
+        color: white;
+      }
+  
+      &--mainLogo{
+        margin: 0 20px;
+        @include font($lora, $normal, 30px, $black);
+      }
     }
   }
 }
