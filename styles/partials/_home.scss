@@ -1,33 +1,40 @@
-.first{
+.section1{
   background: $orangeyYellow;
 
-  .wrapper{
+  &__wrapper{
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
-    .h1{
-    width: 60%;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    @include font($lora, $normal, 100px, $black);
-    }
+    &__centered{
+      display: flex;
+      justify-content: center;
+      width: 50%;
 
-    figure:nth-child(1){
-      bottom: 20%;
-      left: 10%;
-    }
+      &__h1{
+        @include font($lora, $normal, 70px, $black);
+        text-transform: uppercase;
+        position: relative;
 
-    figure{
-      width: 40%;
-      &:nth-child(2){
-        z-index: 1;
-        box-shadow: 15px 15px 0px white;
+        &__circle{
+          position: absolute;
+          top: -50%;
+          right: 20%;
+          bottom: 50%;
+          left: -20%;
+        }
       }
-      img{
+    }
+
+    &__figure{
+      width: 50%;
+
+      &__image{
         display: block;
+        box-shadow: 10px 10px 0 white;
+        transform: translateY(5%);
       }
     }
   }
