@@ -2,3 +2,14 @@
   width: 80%;
   margin: 0 auto;
 }
+
+p,a{
+  @include font($roboto, $normal, 20px, $black);
+}
+
+a.button{
+  background: $accent;
+  padding: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+}

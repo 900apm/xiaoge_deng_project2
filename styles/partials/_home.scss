@@ -34,22 +34,25 @@
       &__image{
         display: block;
         box-shadow: 10px 10px 0 white;
-        transform: translateY(5%);
+        transform: translateY(10%);
       }
     }
   }
 }
 
-.second{
+.section2{
+  padding: 40px 0;
   background: $whiteShade;
 
-  h2{
-    text-transform: uppercase;
-    padding: 20px 0;
-    @include font($roboto, $normal, 40px, $black);
-  }
-
-  p{
-    padding: 20px 0;
+  &__wrapper{
+    h2{
+      text-transform: uppercase;
+      padding: 10px 0;
+      @include font($roboto, $bold, 40px, $black);
+    }
+  
+    p{
+      padding: 30px 0;
+    }
   }
 }
