@@ -12,4 +12,9 @@ a.button{
   padding: 20px;
   text-transform: uppercase;
   display: inline-block;
+  transition: all 0.3s;
+
+  &:hover{
+    color: white;
+  }
 }

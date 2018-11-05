@@ -1,3 +1,16 @@
+main{
+  
+  h2{
+    text-transform: uppercase;
+    padding: 10px 0;
+    @include font($roboto, $bold, 40px, $black);
+  }
+
+  p{
+    padding: 30px 0;
+  }
+}
+
 .section1{
   background: $orangeyYellow;
 
@@ -33,7 +46,7 @@
 
       &__image{
         display: block;
-        box-shadow: 10px 10px 0 white;
+        box-shadow: 20px 20px 0 white;
         transform: translateY(10%);
       }
     }
@@ -41,18 +54,101 @@
 }
 
 .section2{
-  padding: 40px 0;
+  padding: 5% 0;
   background: $whiteShade;
 
   &__wrapper{
-    h2{
-      text-transform: uppercase;
-      padding: 10px 0;
-      @include font($roboto, $bold, 40px, $black);
-    }
   
-    p{
-      padding: 30px 0;
+  }
+}
+
+.section3{
+  padding-bottom: 5%;
+  background: white;
+  
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    figure{
+      max-height: 100%;
+      max-width: 100%;
+      transform: translateY(-10%);
+      box-shadow: 20px 20px 0 0px $rustRed,
+      -200px 20px 0 0px $rustRed;
+
+      img{
+        display: block;
+      }
+    }
+
+    .text{
+      width: 50%;
+      display: block;
+      flex: 1 0 auto;
+      padding-left: 5%;
+      text-align: left;
+    }
+  }
+}
+
+.section4{
+  background: white;
+  
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    figure{
+      max-height: 100%;
+      max-width: 100%;
+      transform: translateY(10%);
+      box-shadow: -20px 20px 0 0px $orangeyYellow,
+      200px 20px 0 0px $orangeyYellow;
+
+      img{
+        display: block;
+      }
+    }
+
+    .text{
+      width: 50%;
+      display: block;
+      flex: 1 0 auto;
+      padding-right: 5%;
+      text-align: right;
+    }
+  }
+}
+
+.section5{
+  background: $whiteShade;
+
+  .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5%;
+
+    .text-box{
+      text-align: left;
+      width: 50%;
+      padding: 2.5%;
+      flex: 1 0 auto;
+
+      h2{
+        position: relative;
+
+        i{
+          position: absolute;
+          left: -15%;
+          bottom: 0;
+          border: 15px solid $orangeyYellow;
+          box-shadow: inset 0px 0px 100px $orangeyYellow;
+          border-radius: 50%;
+        }
+      }
     }
   }
 }
