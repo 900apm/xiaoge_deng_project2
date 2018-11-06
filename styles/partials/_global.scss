@@ -1,13 +1,24 @@
+html{
+  scroll-behavior: smooth;
+}
+
 .wrapper{
   width: 80%;
   margin: 0 auto;
 }
 
-p,a{
+p.lorem,
+a.button{
   @include font($roboto, $normal, 20px, $black);
+  line-height: 32px;
+  padding: 10px 0;
 }
 
 a.button{
+  transition: color 0.2s;
+  @include font($roboto, $bold, 20px, $black);
+  text-align: center;
+  letter-spacing: 1px;
   background: $accent;
   padding: 20px;
   text-transform: uppercase;
@@ -17,4 +28,39 @@ a.button{
   &:hover{
     color: white;
   }
+}
+
+p.lorem-italic{
+  @include font($roboto, $normal, 20px, $black);
+  font-style: italic;
+  line-height: 32px;
+}
+
+a.blue-link{
+  color: $accent;
+
+  &--bold{
+    color: $accent;
+    font-weight: $bold;
+  }
+}
+
+
+
+
+h2.h2,
+h3.h3,
+h4.h4{
+  text-transform: uppercase;
+  padding: 10px 0;
+  @include font($roboto, $bold, 42px, $black);
+  letter-spacing: 1px;
+}
+
+h3.h3{
+  @include font($roboto, $bold, 32px, $black);
+}
+
+h4.h4{
+  @include font($roboto, $bold, 24px, $black);
 }

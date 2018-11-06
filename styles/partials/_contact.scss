@@ -1,0 +1,67 @@
+.contact{
+  background: $whiteShade;
+  
+  &__figure{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+
+    &__image{
+      display: block;
+    }
+
+    &__h1{
+      @include font($lora, $bold, 70px, $black);
+      text-transform: uppercase;
+      position: absolute;
+      bottom: -10%;
+      left: 10%;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+
+    &__aside{
+      height: 100%;
+      width: 30%;
+      background: white;
+      padding: 20px;
+
+      &__ul{
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px 0;
+
+        &__i{
+          color: $orangeyYellow;
+          font-size: 20px;
+          padding: 0 10px;
+        }
+      }
+
+      &__info{
+
+        &__p,
+        &--bold{
+          @include font($roboto, $normal, 20px, $black);
+          line-height: 32px;
+          
+        }
+        
+        &--bold{
+          font-weight: $bold;
+        }
+      }
+    }
+
+    &__main{
+      width: 67.5%;
+    }
+  }
+}

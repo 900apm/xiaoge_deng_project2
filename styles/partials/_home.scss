@@ -1,16 +1,4 @@
-main{
-  
-  h2{
-    text-transform: uppercase;
-    padding: 10px 0;
-    @include font($roboto, $bold, 40px, $black);
-  }
-
-  p{
-    padding: 30px 0;
-  }
-}
-
+/* section 1 */
 .section1{
   background: $orangeyYellow;
 
@@ -26,10 +14,12 @@ main{
       justify-content: center;
       width: 50%;
 
+      /* left side */
       &__h1{
-        @include font($lora, $normal, 70px, $black);
+        @include font($lora, $normal, 80px, $black);
         text-transform: uppercase;
         position: relative;
+        line-height: 92px;
 
         &__circle{
           position: absolute;
@@ -41,6 +31,7 @@ main{
       }
     }
 
+    /* right side */
     &__figure{
       width: 50%;
 
@@ -53,37 +44,35 @@ main{
   }
 }
 
+/* section 2*/
 .section2{
   padding: 5% 0;
   background: $whiteShade;
-
-  &__wrapper{
-  
-  }
 }
 
+/* section 3*/
 .section3{
-  padding-bottom: 5%;
   background: white;
+  padding-bottom: 2.5%;
   
-  .wrapper{
+  &__wrapper{
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
-    figure{
+    &__figure{
       max-height: 100%;
       max-width: 100%;
       transform: translateY(-10%);
       box-shadow: 20px 20px 0 0px $rustRed,
       -200px 20px 0 0px $rustRed;
 
-      img{
+      &__image{
         display: block;
       }
     }
 
-    .text{
+    &__text{
       width: 50%;
       display: block;
       flex: 1 0 auto;
@@ -93,27 +82,29 @@ main{
   }
 }
 
+/* section 4 */
 .section4{
+  padding-top: 2.5%;
   background: white;
   
-  .wrapper{
+  &__wrapper{
     display: flex;
     justify-content: center;
     align-items: flex-start;
 
-    figure{
+    &__figure{
       max-height: 100%;
       max-width: 100%;
       transform: translateY(10%);
       box-shadow: -20px 20px 0 0px $orangeyYellow,
       200px 20px 0 0px $orangeyYellow;
 
-      img{
+      &__image{
         display: block;
       }
     }
 
-    .text{
+    &__text{
       width: 50%;
       display: block;
       flex: 1 0 auto;
@@ -123,91 +114,106 @@ main{
   }
 }
 
+/* section 5 */
 .section5{
+  padding: 5% 0 2.5% 0;
   background: $whiteShade;
 
-  .wrapper{
+  &__wrapper{
     display: flex;
     flex-wrap: wrap;
     padding-top: 5%;
-    width: 75%;
 
-    .text-box{
-      text-align: left;
+    &__text{
       width: 50%;
-      padding: 2.5%;
-      flex: 1 0 auto;
+      display: grid;
+      grid-template-columns: 20% 80%;
+      grid-template-rows: 30% 70%;
+      position: relative;
+      padding: 0 5% 5% 0;
 
-      h2{
-        position: relative;
+      &__h3{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      
+      &__i{
+        position: absolute;
+        top: -5%;
+        right: 15%;
+        font-size: 30px;
+        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        border: 15px solid $orangeyYellow;
+        box-shadow: inset 0px 0px 100px $orangeyYellow;
+        border-radius: 50%;
+      }
 
-        i{
-          position: absolute;
-          left: -15%;
-          bottom: 0;
-          border: 15px solid $orangeyYellow;
-          box-shadow: inset 0px 0px 100px $orangeyYellow;
-          border-radius: 50%;
-        }
+      &__lorem{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        @include font($roboto, $normal, 20px, $black);
       }
     }
   }
 }
 
+/* section 6 */
 .section6{
 
-  figure{
+  &__figure{
 
     width: 100vw;
     display: flex;
     justify-content: center;
 
-    img{
+    &__image{
       display: block;
     }
   }
-
 }
 
+/* section 7 */
 .section7{
 
   padding: 5% 0;
   background: $whiteShade;
 
-  .wrapper{
+  &__wrapper{
     display: flex;
 
-    figure{
+    &__figure{
       width: 35%;
       padding-right: 5%;
 
-      img{
+      &__image{
         display: block;
         box-shadow: 20px 20px 0 0px $orangeyYellow;
       }
     }
 
-    .text{
+    &__text{
       width: 65%;
+      padding-left: 7.5%;
     }
   }
 }
 
+/* section 8 */
 .section8{
-
   padding: 5% 0;
 
-  .wrapper{
+  &__wrapper{
     display: flex;
     justify-content: space-between;
 
-    figure{
-      width: 30%;
+    &__figure{
+      width: 31%;
 
-      img{
+      &__img{
         display: block;
       }
     }
   }
-
 }

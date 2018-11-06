@@ -15,14 +15,20 @@
     align-items: center;
     
     &__a{
-      transition: all 0.2s;
+      transition: color 0.2s;
+      @include font($roboto, $bold, 20px, $black);
+      text-align: center;
+      margin: 0 5px;
+      line-height: 29px;
+      letter-spacing: 1px;
+
       &:hover{
         color: white;
-      }
+        }
   
       &--mainLogo{
         margin: 0 20px;
-        @include font($lora, $normal, 30px, $black);
+        @include font($lora, $bold, 30px, $black);
       }
     }
   }
