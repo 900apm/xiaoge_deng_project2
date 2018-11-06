@@ -1,0 +1,94 @@
+html{
+  background: $whiteShade;
+}
+
+header{
+  figure{
+
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+
+    img{
+      display: block;
+    }
+
+    h1{
+      @include font($lora, $normal, 70px, $black);
+      text-transform: uppercase;
+      position: absolute;
+      bottom: -10%;
+      left: 10%;
+    }
+  }
+}
+
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5%;
+
+  main,aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  
+  main{
+    width: 67.5%;
+    
+    .main1,.main2,.main3{
+      position: relative;
+      margin-bottom: 5%;
+      background: white;
+      padding: 2.5%;
+    }
+
+    .main1::after,
+    .main3::after{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: "";
+      border-bottom: 10px solid $orangeyYellow;
+    }
+
+    .main2,.main3{
+      display: flex;
+
+      figure{
+        width: 20%;
+      }
+
+      .text{
+        width: 80%;
+        display:flex;
+        flex-direction: column;
+        text-align: left;
+      }
+    }
+    
+  }
+
+  aside{
+    width: 30%;
+    background: none;
+    padding: 0;
+
+    .aside1,.aside2{
+      background: white;
+      margin-bottom: 5%;
+      background: white;
+      padding: 5%;
+    }
+  }
+}
+
+
+

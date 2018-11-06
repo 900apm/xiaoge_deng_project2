@@ -1,0 +1,12 @@
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: $grey;
+
+  p{
+    color: $whiteShade;
+    padding: 10px 0;
+  }
+
+}

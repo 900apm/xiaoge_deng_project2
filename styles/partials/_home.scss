@@ -130,6 +130,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     padding-top: 5%;
+    width: 75%;
 
     .text-box{
       text-align: left;
@@ -151,4 +152,62 @@ main{
       }
     }
   }
+}
+
+.section6{
+
+  figure{
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    img{
+      display: block;
+    }
+  }
+
+}
+
+.section7{
+
+  padding: 5% 0;
+  background: $whiteShade;
+
+  .wrapper{
+    display: flex;
+
+    figure{
+      width: 35%;
+      padding-right: 5%;
+
+      img{
+        display: block;
+        box-shadow: 20px 20px 0 0px $orangeyYellow;
+      }
+    }
+
+    .text{
+      width: 65%;
+    }
+  }
+}
+
+.section8{
+
+  padding: 5% 0;
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+
+    figure{
+      width: 30%;
+
+      img{
+        display: block;
+      }
+    }
+  }
+
 }
