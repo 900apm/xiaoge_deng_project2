@@ -3,8 +3,12 @@ html{
 }
 
 .wrapper{
+  transition: width 1s;
   width: 80%;
   margin: 0 auto;
+  @media (max-width: 1035px){
+    width: 85%;
+  }
 }
 
 p.lorem,
@@ -44,9 +48,6 @@ a.blue-link{
     font-weight: $bold;
   }
 }
-
-
-
 
 h2.h2,
 h3.h3,
