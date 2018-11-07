@@ -25,7 +25,7 @@
     
     &__a{
       transition: color 0.3s;
-      @include font($roboto, $bold, 20px, $black);
+      @include font($roboto, $bold, 2rem, $black);
       text-align: center;
       margin: 0 5px;
       line-height: 29px;
@@ -41,7 +41,7 @@
   
       &--mainLogo{
         margin: 0 20px;
-        @include font($lora, $bold, 30px, $black);
+        @include font($lora, $bold, 3rem, $black);
         @media (max-width: 800px){
           display: inline-block;
           position: absolute;
@@ -100,7 +100,7 @@
       padding: 10px 0;
       font-size: 30px;
       text-decoration: none;
-      @include font($lora, $bold, 40px, $orangeyYellow);
+      @include font($lora, $bold, 4rem, $orangeyYellow);
       transition: 0.5s;
 
       &:hover,

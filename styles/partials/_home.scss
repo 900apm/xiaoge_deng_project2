@@ -28,7 +28,7 @@
 
       /* left side */
       &__h1{
-        @include font($lora, $normal, 80px, $black);
+        @include font($lora, $normal, 8rem, $black);
         text-transform: uppercase;
         position: relative;
         line-height: 92px;
@@ -219,7 +219,7 @@
         position: absolute;
         top: -5%;
         right: 15%;
-        font-size: 30px;
+        font-size: 3rem;
         text-align: center;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -231,7 +231,7 @@
       &__lorem{
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        @include font($roboto, $normal, 20px, $black);
+        @include font($roboto, $normal, 2rem, $black);
       }
     }
   }

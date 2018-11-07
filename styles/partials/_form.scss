@@ -12,11 +12,20 @@ form {
     margin-top: 5%;
   }
 
+  label{
+    /* hides the label but still avaliable to screen readers */
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+  }
+
   input[type=text] {
     width: 49%; 
     margin-bottom: 10px;
     padding: 15px;
     border: none;
+    @include font($roboto, $normal, 2rem, grey);
+    font-style: italic;
+    line-height: 32px;
   }
 
   input[type=text].full{
@@ -37,6 +46,9 @@ form {
     border: none;
     cursor: pointer;
     margin: 5px 0;
+    transition: color 0.3s;
+    @include font($roboto, $bold, 2rem, $black);
+    line-height: 32px;
   }
   
   input[type=submit]:hover {

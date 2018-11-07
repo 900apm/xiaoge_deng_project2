@@ -5,7 +5,7 @@
   background: $grey;
 
   &__copyright{
-    @include font($roboto, $normal, 20px, $whiteShade);
+    @include font($roboto, $normal, 2rem, $whiteShade);
     line-height: 32px;
     padding: 10px 0;
   }

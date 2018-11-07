@@ -1,6 +1,37 @@
 html{
   scroll-behavior: smooth;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  transition: font-size 0.3s;
+  
+  @media (max-width: 800px){
+    /* 1rem = 11px */
+    font-size: 68.75%;
+  }
+}
+
+body{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.skip-link {
+  position: fixed;
+  width: 80%;
+  text-align: center;
+  left: -1000px;
+  top: 0px;
+  z-index: 999;
+  background: rgba(0,0,0,0.3);
+  @include font($roboto, $bold, 2rem, $whiteShade);
+  text-transform: uppercase;
+  padding: 2rem;
+  border-radius: 1rem;
+  &:focus {
+    left: 10%;
+    outline: none;
+  }
 }
 
 .wrapper{
@@ -17,14 +48,14 @@ html{
 
 p.lorem,
 a.button{
-  @include font($roboto, $normal, 20px, $black);
+  @include font($roboto, $normal, 2rem, $black);
   line-height: 32px;
   padding: 10px 0;
 }
 
 a.button{
   transition: color 0.2s;
-  @include font($roboto, $bold, 20px, $black);
+  @include font($roboto, $bold, 2rem, $black);
   text-align: center;
   letter-spacing: 1px;
   background: $accent;
@@ -39,7 +70,7 @@ a.button{
 }
 
 p.lorem-italic{
-  @include font($roboto, $normal, 20px, $black);
+  @include font($roboto, $normal, 2rem, $black);
   font-style: italic;
   line-height: 32px;
 }
