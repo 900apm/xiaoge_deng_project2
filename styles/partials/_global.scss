@@ -1,5 +1,6 @@
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden; 
 }
 
 .wrapper{
@@ -8,6 +9,9 @@ html{
   margin: 0 auto;
   @media (max-width: 1035px){
     width: 85%;
+  }
+  @media (max-width: 800px){
+    width: 90%;
   }
 }
 

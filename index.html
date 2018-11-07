@@ -18,9 +18,8 @@
 
   <main>
     
-    <!-- navigation -->
+    <!-- desktop & tablet navigation -->
     <nav class="nav">
-      
       <ul class="nav__ul">
         <li>
           <a href="index.html" class="nav__ul__a">home</a>
@@ -37,6 +36,26 @@
         <li>
           <a href="contact.html" class="nav__ul__a">contact</a>
         </li>
+        <li>
+          <!-- hidden burger -->
+          <span onclick="openNav()" class="nav__ul__a--hidden-burger">
+            <i class="fas fa-bars"></i>
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- mobile navigation -->
+    <nav class="mobile-nav" id="mobile-nav">
+    
+      <a href="javascript:void(0)" class="mobile-nav__close-button" onclick="closeNav()">&times;</a>
+    
+      <ul class="mobile-nav__content">
+        <li><a href="index.html" class="mobile-nav__content__a">home</a></li>
+        <li><a href="#about" class="mobile-nav__content__a">about</a></li>
+        <li><a href="blog.html" class="mobile-nav__content__a">blog</a></li>
+        <li><a href="contact.html" class="mobile-nav__content__a">contact</a></li>
+
       </ul>
 
     </nav>
@@ -241,6 +260,17 @@
   <footer class="footer">
     <p class="footer__copyright">Copyright © 2018 HackerYou</p>
   </footer>
+
+  <!-- mobile nav menu js-->
+  <script>
+    function openNav() {
+      document.getElementById("mobile-nav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mobile-nav").style.width = "0%";
+    }
+  </script>
   
 </body>
 </html>

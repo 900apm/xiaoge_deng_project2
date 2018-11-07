@@ -5,6 +5,15 @@
   height: 50px;
   display: flex;
   align-items: center;
+  z-index: 10;
+  /* mobile */
+  @media (max-width: 800px){
+    /* "hex" code of $orangeyYellow */
+    background: rgba(246,168,35, 0.666);
+    width: 100%;
+    position: fixed;
+    margin-bottom: 50px;
+  }
 
   &__ul{
     width: 40%;
@@ -15,21 +24,97 @@
     align-items: center;
     
     &__a{
-      transition: color 0.2s;
+      transition: color 0.3s;
       @include font($roboto, $bold, 20px, $black);
       text-align: center;
       margin: 0 5px;
       line-height: 29px;
       letter-spacing: 1px;
+      /* mobile */
+      @media (max-width: 800px){
+        display: none;
+      }
 
       &:hover{
-        color: white;
+        color:$whiteShade;
         }
   
       &--mainLogo{
         margin: 0 20px;
         @include font($lora, $bold, 30px, $black);
+        @media (max-width: 800px){
+          display: inline-block;
+          position: absolute;
+          left: 5%;
+          bottom: 12.5px;
+        }
+      }
+
+      &--hidden-burger{     
+        display: none;
+        font-size: 30px;
+        line-height: 1.61;
+        cursor: pointer;
+        transition: color 0.3s;
+        &:hover{
+          color:$whiteShade;
+        }
+        /* mobile */
+        @media (max-width: 800px){
+          display: inline-block;
+          position: absolute;
+          right: 5%;
+          bottom: 0;
+        }
       }
     }
   }
 }
+
+/* mobile overlay menu */
+.mobile-nav{
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25%;
+
+  &__content{
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 10%;
+    width: 100%;
+
+    &__a{
+      display: inline-block;
+      padding: 10px 0;
+      font-size: 30px;
+      text-decoration: none;
+      @include font($lora, $bold, 40px, $orangeyYellow);
+      transition: 0.5s;
+
+      &:hover,
+      &:focus{
+        color: $whiteShade;
+      }
+    }
+  }
+
+  &__close-button{
+    color: $whiteShade;
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    }
+  }
