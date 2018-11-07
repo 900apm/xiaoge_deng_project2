@@ -12,7 +12,7 @@
     background: rgba(246,168,35, 0.666);
     width: 100%;
     position: fixed;
-    margin-bottom: 50px;
+    
   }
 
   &__ul{
@@ -42,6 +42,7 @@
       &--mainLogo{
         margin: 0 20px;
         @include font($lora, $bold, 3rem, $black);
+        /* mobile */
         @media (max-width: 800px){
           display: inline-block;
           position: absolute;
